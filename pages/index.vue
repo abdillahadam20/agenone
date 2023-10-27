@@ -1,13 +1,11 @@
 <template>
-  <div>
-    Index of vue
-  </div>
+	<div>Index of vue</div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
+<style scoped lang="postcss">
+div {
+	@apply bg-agenone-gray-200 w-20 h-20 font-inter;
+}
 </style>

@@ -1,21 +1,45 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "autoprefixer": "^10.4.16",
-    "nuxt": "^3.8.0",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "vue": "^3.3.7",
-    "vue-router": "^4.2.5"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"prepare": "husky install",
+		"lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+		"lint:prettier": "prettier --check .",
+		"lint": "yarn lint:js && yarn lint:prettier",
+		"lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+	},
+	"lint-staged": {
+		"**/*": "prettier --write --ignore-unknown"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"@nuxtjs/eslint-config-typescript": "^12.1.0",
+		"@nuxtjs/google-fonts": "^3.0.2",
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"@typescript-eslint/parser": "^6.9.0",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.52.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-config-standard-with-typescript": "^39.1.1",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+		"eslint-plugin-prettier": "^5.0.1",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-vue": "^9.18.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.0.2",
+		"nuxt": "^3.8.0",
+		"postcss": "^8.4.31",
+		"prettier": "^3.0.3",
+		"tailwindcss": "^3.3.5",
+		"typescript": "^5.2.2",
+		"vue": "^3.3.7",
+		"vue-router": "^4.2.5"
+	}
 }
