@@ -20,5 +20,6 @@ export default defineNuxtConfig({
 				prefetch: true,
 			},
 		],
+		'nuxt-icon',
 	],
 });
