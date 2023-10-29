@@ -1,26 +1,22 @@
 <template>
-	<div>
-		<button :class="buttons" :disabled="disabled">
-			<slot>{{ props.title }}</slot>
-			<slot>
-				<icon
-					v-if="icon"
-					:class="{
-						'w-4 h-4': sm || size === 'sm',
-						'w-6 h-6': !sm || size !== 'sm',
-					}"
-					:name="props.icon"
-				/>
-			</slot>
-		</button>
-	</div>
+	<button :class="buttons" :disabled="disabled">
+		<slot>{{ props.title }}</slot>
+		<icon
+			v-if="icon"
+			:class="{
+				'w-4 h-4': sm || size === 'sm',
+				'w-6 h-6': !sm && size !== 'sm',
+			}"
+			:name="props.icon"
+		/>
+	</button>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
 	title: {
 		type: String,
-		default: 'button',
+		default: '',
 	},
 	color: {
 		type: String,
