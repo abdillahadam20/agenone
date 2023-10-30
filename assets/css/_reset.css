@@ -26,3 +26,10 @@ body {
 a {
 	text-decoration: none;
 }
+
+mark {
+	background: linear-gradient(280deg, #00796d 0%, #38c682 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

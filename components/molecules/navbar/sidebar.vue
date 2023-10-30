@@ -48,11 +48,11 @@ const handleToggleSidebar = () => {
 
 <style scoped lang="postcss">
 .sidebar-overlay {
-	@apply lg:hidden bg-gray-600 duration-300 h-screen transition-all ease-in-out w-full left-0 top-0 fixed opacity-40;
+	@apply z-50 lg:hidden bg-gray-600 duration-300 h-screen transition-all ease-in-out w-full left-0 top-0 fixed opacity-40;
 }
 
 .sidebar {
-	@apply w-64 lg:hidden h-screen duration-300 bg-white shadow-xl fixed left-0 top-0 transition-all ease-in-out;
+	@apply w-64 z-50 lg:hidden h-screen duration-300 bg-white shadow-xl fixed left-0 top-0 transition-all ease-in-out;
 
 	&-container {
 		@apply px-4 py-4;

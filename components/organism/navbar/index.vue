@@ -1,16 +1,16 @@
 <template>
 	<nav class="nav">
 		<div class="nav-container">
-			<div class="lg:hidden flex justify-between">
-				<div class="flex justify-center items-center gap-2">
-					<img class="w-[36px]" src="~/assets/img/agenone-logo.svg" />
-					<span class="font-inter text-xl italic font-bold">Agenone</span>
+			<div class="nav-container-sidebar">
+				<div class="nav-container-sidebar-logo">
+					<img src="~/assets/img/agenone-logo.svg" />
+					<span>Agenone</span>
 				</div>
 				<button
-					class="w-8 h-8 rounded-lg border flex justify-center items-center"
+					class="nav-container-sidebar-close"
 					@click="handleToggleSidebar"
 				>
-					<icon name="ci:hamburger-lg" class="w-4" h-4 />
+					<icon name="ci:hamburger-lg" class="w-4 h-4 text-white" />
 				</button>
 			</div>
 			<div class="nav-container-content">
@@ -47,10 +47,30 @@ const handleToggleSidebar = () => {
 
 <style scoped lang="postcss">
 .nav {
-	@apply p-4 md:px-8 md:py-4 lg:px-20 lg:py-4;
+	@apply p-4 md:px-8 md:py-4 lg:px-20 lg:py-4 bg-transparent relative z-50;
 
 	&-container {
 		@apply max-w-7xl mx-auto;
+
+		&-sidebar {
+			@apply lg:hidden flex justify-between;
+
+			&-logo {
+				@apply flex justify-center items-center gap-2;
+
+				img {
+					@apply w-[36px];
+				}
+
+				span {
+					@apply font-inter text-white text-xl italic font-bold;
+				}
+			}
+
+			&-close {
+				@apply w-8 h-8 rounded-lg border flex justify-center items-center;
+			}
+		}
 
 		&-content {
 			@apply hidden lg:flex justify-between items-center;
@@ -63,12 +83,12 @@ const handleToggleSidebar = () => {
 				}
 
 				span {
-					@apply text-2xl font-bold;
+					@apply text-white text-2xl font-bold;
 				}
 			}
 
 			&-list {
-				@apply flex justify-center items-center gap-10;
+				@apply flex justify-center items-center gap-10 text-white;
 			}
 		}
 	}
