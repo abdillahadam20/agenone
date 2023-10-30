@@ -1,7 +1,5 @@
 <template>
-	<div>
-		<!-- <AtomsButton>Button</AtomsButton> -->
-	</div>
+	<TemplatesHero />
 </template>
 
 <script setup lang="ts"></script>
