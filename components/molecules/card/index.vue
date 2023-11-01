@@ -37,46 +37,26 @@ body {
 
 <style lang="postcss" scoped>
 .container {
-	@apply flex flex-col justify-center items-center w-[290px] gap-[10px];
+	@apply flex flex-col justify-center items-center lg:w-[240px] xl:w-[290px] lg:h-auto h-[14rem] w-[290px] gap-[10px];
 }
 
 .card {
-	display: flex;
-	padding: 10px;
-	align-items: flex-start;
-	gap: 10px;
-	border-radius: 1000px;
+	@apply flex p-[10px] items-start gap-[10px] rounded-full;
 	background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .wrap {
-	display: flex;
-	width: 88px;
-	height: 88px;
-	padding: 18px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 1000px;
+	@apply flex lg:w-[44px] lg:h-[44px] xl:w-[88px] xl:h-[88px] w-[88px] h-[88px] p-[18px] justify-center items-center gap-[10px] rounded-full;
 	border: 2px solid var(--primary-500, #00796d);
 	background: var(--shades-white, #fff);
 }
 
 .icon {
-	width: 52px;
-	height: 52px;
-	flex-shrink: 0;
+	@apply xl:w-[52px] xl:h-[52px] lg:w-[26px] lg:h-[26px] flex-shrink-0;
 }
 
 .desc {
+	@apply font-inter lg:text-lg xl:text-2xl font-medium text-center;
 	color: var(--shades-white, #fff);
-	text-align: center;
-
-	/* Text 2Xl / Medium */
-	font-family: Inter;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 32px; /* 133.333% */
 }
 </style>
