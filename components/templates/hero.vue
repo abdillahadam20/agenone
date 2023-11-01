@@ -16,27 +16,8 @@
 						>
 					</div>
 				</div>
-				<div
-					class="bg-[url(~/assets/img/hero-banner.svg)] bg-no-repeat bg-cover"
-				>
-					<div class="flex flex-col gap-11 justify-center items-center">
-						<h1
-							class="text-white text-center font-inter text-[32px] leading-[40px] font-semibold"
-						>
-							Benefit of improving your business
-						</h1>
-						<div class="flex justify-center items-center">
-							<MoleculesCard
-								v-for="(card, index) in data?.icon"
-								:key="index"
-								:icon="card.icon"
-								:alt="card.alt"
-								:title="card.title"
-								class="flex flex-row"
-							/>
-						</div>
-					</div>
-				</div>
+				<OrganismCardDesktop />
+				<OrganismCardMobile />
 			</div>
 		</div>
 	</section>
