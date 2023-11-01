@@ -22,5 +22,6 @@ export default defineNuxtConfig({
 		],
 		'nuxt-icon',
 		'@vueuse/nuxt',
+		'nuxt-swiper',
 	],
 });
