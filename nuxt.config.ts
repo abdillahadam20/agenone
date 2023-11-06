@@ -20,5 +20,8 @@ export default defineNuxtConfig({
 				prefetch: true,
 			},
 		],
+		'nuxt-icon',
+		'@vueuse/nuxt',
+		'nuxt-swiper',
 	],
 });
