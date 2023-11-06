@@ -2,6 +2,7 @@
 	<div class="app">
 		<OrganismNavbar />
 		<slot />
+		<OrganismFooter />
 	</div>
 </template>
 

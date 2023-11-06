@@ -35,7 +35,7 @@ const largerThanMd = breakpoints.greater('md');
 
 <style scoped lang="postcss">
 .hero {
-	@apply px-6 py-10 lg:py-[100px] lg:px-[120px] h-max absolute top-0 w-full;
+	@apply px-6 py-10 lg:py-[100px] lg:px-[120px] h-max relative top-[-6rem] w-full;
 	background: url('/assets/img/ornament-hero.svg'), #0c111f;
 	background-size: cover;
 	background-repeat: no-repeat;
