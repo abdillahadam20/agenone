@@ -22,19 +22,21 @@
 							hello@agenone.com
 						</p>
 					</div>
-					<div
-						v-for="(i, idx) in 3"
-						:key="idx"
-						class="footer-container-content-bottom-right"
-					>
-						<div class="flex flex-col gap-4 w-20">
-							<h1 class="text-white text-lg font-bold">{{ data?.title }}</h1>
-							<ul v-for="(item, index) in data?.menu" :key="index">
-								<MoleculesFooter
-									class="text-agenone-gray-200 text-lg font-normal"
-									:title="item.title"
-								/>
-							</ul>
+					<div class="footer-container-content-bottom-right">
+						<div v-for="(i, idx) in 3" :key="idx">
+							<div class="flex flex-col lg:gap-2 xl:gap-4 w-20">
+								<h1
+									class="text-white md:text-sm lg:text-base xl:text-lg font-bold"
+								>
+									{{ data?.title }}
+								</h1>
+								<ul v-for="(item, index) in data?.menu" :key="index">
+									<MoleculesFooter
+										class="text-agenone-gray-200 md:text-sm lg:text-base xl:text-lg font-normal"
+										:title="item.title"
+									/>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -53,30 +55,28 @@ const data = footer.value?.data;
 
 <style scoped lang="postcss">
 .footer {
-	@apply relative font-inter left-0 top-[352rem] py-8;
-	background-image: url('~/assets/img/bg-footer.svg');
-	background-repeat: no-repeat;
-	background-size: cover;
+	@apply relative h-[1085px] font-inter left-0 top-[385rem] py-8 lg:h-[30rem] xl:h-[38rem] 2xl:h-[55rem] bg-no-repeat bg-cover md:h-[23rem] bg-[url(~/assets/img/bg-footer-mobile.svg)] md:bg-[url(~/assets/img/bg-footer.svg)];
 
 	&-container {
 		@apply max-w-7xl mx-auto;
 
 		&-content {
-			@apply flex flex-col gap-[15rem];
+			@apply flex flex-col gap-8 md:gap-6 lg:gap-8 xl:gap-4  2xl:gap-[10rem];
 
 			&-top {
-				@apply flex flex-row justify-center gap-12 p-8;
+				@apply flex flex-col md:flex-row items-center justify-center gap-12 md:px-4 xl:p-8;
 
 				h1 {
-					@apply text-white text-2xl lg:text-left text-center lg:text-[44px] lg:leading-[52px] font-semibold lg:tracking-[-0.88px];
+					@apply text-white text-2xl w-[20rem] md:w-[24rem] lg:w-[60%]  md:text-left text-center xl:text-[44px] xl:leading-[52px] font-semibold xl:tracking-[-0.88px] lg:text-3xl;
 				}
 			}
 
 			&-bottom {
-				@apply flex flex-col lg:flex-row lg:gap-10;
+				@apply flex p-8 flex-col justify-center items-center gap-10 md:flex-row lg:gap-10 md:p-4 lg:p-8;
 
 				&-left {
-					@apply flex flex-col gap-[25px];
+					@apply flex flex-col gap-4 lg:gap-4 xl:gap-[25px] md:w-[22rem] lg:w-[55%];
+
 					&-logo {
 						@apply flex gap-3 text-white text-2xl italic font-bold;
 
@@ -86,16 +86,16 @@ const data = footer.value?.data;
 					}
 
 					&-desc {
-						@apply text-agenone-gray-200 text-lg font-normal;
+						@apply text-agenone-gray-200 md:text-sm lg:text-lg font-normal;
 					}
 
 					&-email {
-						@apply text-agenone-gray-200 text-lg font-medium mt-[15px];
+						@apply text-agenone-gray-200 text-lg font-medium lg:mt-[10px] xl:mt-[15px];
 					}
 				}
 
 				&-right {
-					@apply grid grid-cols-1 md:grid-cols-3 lg:gap-20;
+					@apply grid grid-cols-2 md:grid-cols-3 md:gap-4 xl:gap-20 gap-16 w-[22rem];
 				}
 			}
 		}
