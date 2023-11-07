@@ -55,7 +55,7 @@ const data = footer.value?.data;
 
 <style scoped lang="postcss">
 .footer {
-	@apply relative h-[1085px] font-inter left-0 top-[385rem] py-8 lg:h-[30rem] xl:h-[38rem] 2xl:h-[55rem] bg-no-repeat bg-cover md:h-[23rem] bg-[url(~/assets/img/bg-footer-mobile.svg)] md:bg-[url(~/assets/img/bg-footer.svg)];
+	@apply relative h-[1085px] font-inter left-0 top-[385rem] md:top-[370rem] lg:top-[338rem] py-8 lg:h-[30rem] xl:h-[38rem] 2xl:h-[55rem] bg-no-repeat bg-cover md:h-[23rem] bg-[url(~/assets/img/bg-footer-mobile.svg)] md:bg-[url(~/assets/img/bg-footer.svg)];
 
 	&-container {
 		@apply max-w-7xl mx-auto;
